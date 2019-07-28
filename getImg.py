@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import argparse
 import json
 import requests
@@ -48,7 +49,6 @@ def download(imgUrl, dir):
 def getContentImg(html):
     replace_pattern = r'<[img|IMG].*?/>' #img标签的正则式
     img_url_pattern = r'.+?src="(\S+)"' #img_url的正则式
-    replaced_img_url_list = []
     img_url_list = []
     need_replace_list = re.findall(replace_pattern, html)#找到所有的img标签
     for tag in need_replace_list:
@@ -85,4 +85,5 @@ if __name__ == '__main__':
 
     
     for img in list(chain.from_iterable(imgList)):
+        print("下载:",img)
         download(img,"./images")    

@@ -6,6 +6,6 @@
 ```
 cd 项目根目录
 pipenv install
-python getImg.py -answer [知乎问题id]
+python3 getImg.py -answer [知乎问题id]
 ```
 (过一会)找到根目录下的images文件夹查看文件
