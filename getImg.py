@@ -78,7 +78,6 @@ if __name__ == '__main__':
     while isLast == False:
         for data in getDataList(jsonObject):
             imgList.append(getContentImg(getContent(data)))
-            isLast = isLastPage(jsonObject)
         print("开始处理下一页")    
         jsonObject = getJson(getNextPage(jsonObject))
         isLast = isLastPage(jsonObject)   
